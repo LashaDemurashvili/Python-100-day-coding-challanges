@@ -1,6 +1,0 @@
-"""
-Program Descriptions
-
-
-
-"""
