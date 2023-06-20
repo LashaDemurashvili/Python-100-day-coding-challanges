@@ -6,6 +6,7 @@ Program Desc:
 calculate average height
 """
 
+
 info = """
 # input format: 175 187 196
 # NOTE: separated by only space

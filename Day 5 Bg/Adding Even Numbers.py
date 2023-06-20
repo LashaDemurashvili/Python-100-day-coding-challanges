@@ -6,7 +6,6 @@ Program Descriptions:
 odd even numbers
 """
 
-
 total_even = 0
 total = 5050
 
