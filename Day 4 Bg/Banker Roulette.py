@@ -1,4 +1,7 @@
 """
+Day 4 - Beginner - Randomisation and Python Lists
+
+
 practice random module
 practice split module
 
