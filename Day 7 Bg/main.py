@@ -26,7 +26,7 @@ if hint == "yes":
     print(
         f'Hint - Word is starting >> {chosen_word[0]} ... and ending ... {chosen_word[-1:]} << \nlength is {len(chosen_word)}')
     display = ["_" for x in chosen_word]
-    display[0] = chosen_word[0];
+    display[0] = chosen_word[0]
     display[-1:] = chosen_word[-1:]
     print(f"{display}")
 elif hint == "no":
@@ -37,7 +37,7 @@ else:
 while not end_of_game:
     guess = input("Guess a letter: ").lower()
     if guess in display and display.count(guess) == chosen_word.count(guess):
-        print(f"You've already guess {guess}")
+        print(f"You've already guess all characters >>> {guess} <<<")
 
     elif guess in passed_wrong:
         print(f"You've already choose {guess} which is not correct!")
