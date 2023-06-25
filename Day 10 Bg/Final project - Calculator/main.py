@@ -1,3 +1,8 @@
+"""
+Day 10 - Beginner - Functions with Outputs
+
+"""
+
 from recources.art import logo
 
 
@@ -56,4 +61,3 @@ def calculator():
 
 
 calculator()
-
