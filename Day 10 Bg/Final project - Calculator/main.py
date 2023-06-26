@@ -92,5 +92,6 @@ def calculator():
 # launch
 calculator()
 
+
 print('\n', 'Calculation history')
 print(calculation_history)
