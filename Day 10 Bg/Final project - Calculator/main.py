@@ -49,23 +49,16 @@ def calculator():
             num2 = float(input("What's the next number?: "))
 
             if operation_symbol in operations:
-
                 # after this code 'calculation_function' will be function, which is declared in 'operations' dictionary
                 calculation_function = operations[operation_symbol]
 
-                try:
-                    answer = calculation_function(num1, num2)
-                    answer = round(answer, 2)
-                except Exception as ex:
-                    print("\n")
-                    print(f"Errors occur >>> {ex} !!!")
-                    continue
-                else:
-                    result = f"{num1} {operation_symbol} {num2} = {answer}"
-                    print(result)
+                answer = calculation_function(num1, num2)
+                answer = round(answer, 2)
+                result = f"{num1} {operation_symbol} {num2} = {answer}"
+                print(result)
 
-                    # add new calculation in 'calculation_history' list
-                    calculation_history.append(str(result))
+                # add new calculation in 'calculation_history' list
+                calculation_history.append(str(result))
             else:
                 print("Wrong symbol !!!\n")
                 continue
@@ -84,9 +77,9 @@ def calculator():
             else:
                 print("Calculation process was ended !")
                 should_continue = False
-
                 # or we can use just - beak
                 # break
+
     except Exception as ex:
         print("\n")
         print(f"Errors occur >>> {ex} !!!")
