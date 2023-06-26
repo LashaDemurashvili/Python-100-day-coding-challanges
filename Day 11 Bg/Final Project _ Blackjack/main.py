@@ -1,4 +1,6 @@
 """
+Day 11 - Beginner - The Blackjack Capstone Project
+
 main Rules
 
 ## The deck is unlimited in size.
@@ -58,7 +60,6 @@ def compare(user_score, computer_score):
 
 
 def play_game():
-
     print(logo)
 
     user_cards = []
@@ -95,6 +96,7 @@ def play_game():
     print(f"   Computer's final hand: {computer_cards}, final score: {computer_score}")
     print(compare(user_score, computer_score))
     print("\n")
+
 
 while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ") == "y":
     play_game()
