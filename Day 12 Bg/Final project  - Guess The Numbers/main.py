@@ -9,11 +9,11 @@ check if user guess the number
 
 from recources.art import logo
 import random
-import colorama
+import colorama as cl
 from colorama import Fore, Back, Style
 
 # Initialize colorama
-colorama.init(autoreset=True)
+cl.init(autoreset=True)
 
 # create lists to calculate final result
 results_list = []
@@ -28,7 +28,7 @@ results_dict = {
 def guess_number():
     # generate random number
     f_num = 1
-    l_num = 100
+    l_num = 20
     rand_number = random.randint(f_num, l_num)
 
     # welcome
@@ -51,10 +51,10 @@ def guess_number():
             if attempts == 0:
                 print(f"{Fore.LIGHTRED_EX}You lose !!!")
 
-                # append to list 1 is win 0 is loss
+                # append to list: 1 is win 0 is loss
                 results_list.append(0)
 
-                # iterate
+                # update dict value
                 results_dict["loss"] += 1
                 break
 
@@ -67,9 +67,10 @@ def guess_number():
                 # append to list 1 is win 0 is loss
                 results_list.append(1)
 
-                # iterate
+                # update dict value
                 results_dict["win"] += 1
                 break
+
             elif guess_num > rand_number:
                 print("Guess again.")
                 print(f"X <<< {guess_num} is too high")
@@ -89,7 +90,7 @@ def guess_number():
         if input("You want to play again? y/n \n: ") == "y":
             print(f"{Fore.LIGHTCYAN_EX}New Game START")
 
-            # call again program and stat new game
+            # call again program and start new game
             guess_number()
         else:
             print(f"{Fore.LIGHTBLUE_EX}Program END !")
