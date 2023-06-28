@@ -1,3 +1,6 @@
+"""
+Day 14 - Beginner - Higher Lower Game Project
+"""
 from recources.art import logo, vs
 from recources.game_data import data
 import colorama as cl
@@ -7,7 +10,7 @@ import random
 cl.init(autoreset=True)
 
 
-# Get data from random account
+# Get random data; which is list and in list is dict [{key:vale}, {key:vale}, {key:vale}]
 def random_account():
     return random.choice(data)
 
@@ -17,7 +20,9 @@ def format_data(account):
     name = account["name"]
     description = account["description"]
     country = account["country"]
-    # print(f'{name}: {account["follower_count"]}')
+
+    # testing
+    # print(f'{Fore.LIGHTRED_EX} {name}: {account["follower_count"]}')
     return f"{name}, a {description}, from {country}"
 
 
@@ -34,6 +39,7 @@ def game():
     print(logo)
     score = 0
     game_should_continue = True
+
     account_a = random_account()
     account_b = random_account()
 
@@ -43,6 +49,7 @@ def game():
         account_a = account_b
         account_b = random_account()
 
+        # avoid thad don't have same data
         while account_a == account_b:
             account_b = random_account()
 
@@ -53,9 +60,13 @@ def game():
         guess = input("Who has more followers? Type 'A' or 'B': ").lower()
         a_follower_count = account_a["follower_count"]
         b_follower_count = account_b["follower_count"]
+
         is_correct = check_answer(guess, a_follower_count, b_follower_count)
+        # returned True or False
 
         print(logo)
+
+        # if True:
         if is_correct:
             score += 1
             print(f"{Fore.GREEN}You're right! Current score: {score}.")
@@ -63,11 +74,17 @@ def game():
             game_should_continue = False
             print(f"{Fore.RED}Sorry, that's wrong. Final score: {score}")
 
+    if input("You want a new game ? y/n: ") == "y":
+        print(f"{Fore.LIGHTBLUE_EX}New Game Start")
+        game()
+    else:
+        print("Good bay!")
 
-print("*" * 10, "Guess which has more followers on instagram".title(), "*" * 10)
+
+text = " Guess which has more followers on instagram "
+print(f"{Fore.YELLOW} {text.center(len(text) * 2, '*').title()}")
+
 game()
-
-
 
 
 '''
@@ -92,4 +109,3 @@ situation where the number of followers of choice A keeps going up over the cour
 # Add art.
 # Clear screen between rounds.
 '''
-
