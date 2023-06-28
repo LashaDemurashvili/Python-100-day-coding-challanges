@@ -29,6 +29,7 @@ def prices(menu_dict: dict):
         coffee_cost = menu_dict[item]["cost"]
         print(f"{coffee_name} - Price: ${coffee_cost}")
 
+
 def report():
     """print resources"""
     print("\n")
@@ -82,7 +83,6 @@ def make_coffee(drink_name, order_ingredients):
 print("Type 'report' if you want to see resources"
       "\nType 'off' if you want to off machine")
 
-
 # print prices
 prices(menu_dict=menu)
 
@@ -106,5 +106,3 @@ while is_on:
     except:
         print(f"{Fore.RED} ERROR occur !!! \n Program restarted")
         continue
-
-
