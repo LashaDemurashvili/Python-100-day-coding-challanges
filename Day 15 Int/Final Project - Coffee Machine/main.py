@@ -4,9 +4,9 @@ Day 15 - Intermediate - Local Development Environment Setup & the Coffee Machine
 Coffee Machine Program
 """
 import colorama as cl
-from colorama import Fore, Back
+from colorama import Fore
 
-from Resources.data import MENU as menu
+from Resources.data import menu
 
 cl.init(autoreset=True)
 
@@ -27,7 +27,7 @@ def prices(menu_dict: dict):
     for item in menu_dict:
         coffee_name = item
         coffee_cost = menu_dict[item]["cost"]
-        print(f"{coffee_name} - Price: ${coffee_cost}")
+        print(f"{Fore.GREEN}{coffee_name} {str(coffee_cost).rjust(15, ' ')}")
 
 
 def report():
