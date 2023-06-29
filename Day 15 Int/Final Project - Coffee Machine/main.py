@@ -27,7 +27,8 @@ def prices(menu_dict: dict):
     for item in menu_dict:
         coffee_name = item
         coffee_cost = menu_dict[item]["cost"]
-        print(f"{Fore.GREEN}{coffee_name} {str(coffee_cost).rjust(15, ' ')}")
+        # using ljust() method
+        print(f"{Fore.GREEN}{str(coffee_name).ljust(13)} ${coffee_cost}")
 
 
 def report():
