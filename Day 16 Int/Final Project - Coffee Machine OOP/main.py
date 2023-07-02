@@ -2,8 +2,6 @@ from menu import Menu, MenuItem
 from coffee_maker import CoffeeMaker
 from money_machine import MoneyMachine
 
-# Create objects
-# () for execute
 
 money_machine = MoneyMachine()
 coffee_maker = CoffeeMaker()
@@ -31,3 +29,11 @@ while True:
         print(f"There is some ERROR ==> {e}")
         print("Program Restarted !!!\n")
         continue
+
+
+"""
+# Create objects
+# () for execute
+# Object = ClassBlueprint()
+# car = CarBlueprint() - for example
+"""
