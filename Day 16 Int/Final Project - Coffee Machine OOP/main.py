@@ -11,17 +11,23 @@ menu = Menu()
 
 is_on = True
 
-while is_on:
-    options = menu.get_items()
-    choice = input(f"What would you like? {options}")
-    if choice == 'off':
-        is_on = False
-    if choice == "report":
-        coffee_maker.report()
-        money_machine.report()
-    else:
-        drink = menu.find_drink(choice)
+print("Type: \n'off' for stop process\n'Report' for report\nCoffee name for coffee")
+while True:
+    try:
+        options = menu.get_items()
+        choice = input(f"What would you like? {options}")
+        if choice == 'off':
+            print("Machine off")
+            break
+        if choice == "report":
+            coffee_maker.report()
+            money_machine.report()
+        else:
+            drink = menu.find_drink(choice)
 
-        if coffee_maker.is_resource_sufficient(drink) and money_machine.make_payment(drink.cost):
-            coffee_maker.make_coffee(drink)
-
+            if coffee_maker.is_resource_sufficient(drink) and money_machine.make_payment(drink.cost):
+                coffee_maker.make_coffee(drink)
+    except Exception as e:
+        print(f"There is some ERROR ==> {e}")
+        print("Program Restarted !!!\n")
+        continue
