@@ -5,9 +5,9 @@ trivia
 https://opentdb.com/
 """
 import requests
-url = requests.get("https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=boolean")
+response = requests.get("https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=boolean")
 
-data_json = url.json()
+data_json = response.json()
 question_data = data_json["results"]
 
 

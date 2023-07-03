@@ -1,3 +1,6 @@
+from colors import *
+
+
 class QuizBrain:
     def __init__(self, question_list):
         self.question_list = question_list
@@ -25,9 +28,9 @@ class QuizBrain:
     def check_answer(self, user_answer, correct_answer):
         if user_answer.lower() == correct_answer.lower() or int(user_answer) == self.x:
             self.score += 1
-            print(f"That's a correct answer")
+            print(f"{Fore.GREEN}That's a correct answer")
         else:
-            print("That's wrong!")
+            print(f"{Fore.RED}That's wrong!")
+            print(f"{Fore.YELLOW}Correct answer was: {correct_answer}")
         print()
-        print(f"Correct answer was: {correct_answer}")
         print(f"Your current score is {self.score}/{self.question_number} \n")

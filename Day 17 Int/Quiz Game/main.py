@@ -2,6 +2,8 @@ from quiz_data import question_data
 from question_model import Question
 from quiz_brain import QuizBrain
 
+from colors import *
+
 # create new list - which include new object of class Question(x, y)
 question_list = []
 
