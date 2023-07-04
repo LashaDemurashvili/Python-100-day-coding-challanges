@@ -1,4 +1,4 @@
 # Day 20 - Intermediate - Build the Snake Game Part 1 Animation & Coordinates
 
-## 
+## Snake Game Part 1
 
