@@ -15,7 +15,6 @@ print('my name'.ljust(10, '/'))
 """
 import random
 
-
 # code with nonajanashia
 # day23 save_01
 
@@ -33,3 +32,19 @@ import random
 #
 # x = str(random.choice(data))
 # print(f"{checking(x)} - '{x}'")
+
+import colorama
+from colorama import Fore
+
+colorama.init()
+
+x = 5
+y = 0
+try:
+    print(x / y)
+except Exception as ex:
+    print(f"{Fore.RED}Error: {ex} {Fore.RESET}")
+else:
+    print(f"{Fore.GREEN}code execute successfully{Fore.RESET}")
+finally:
+    print("Program end!")
