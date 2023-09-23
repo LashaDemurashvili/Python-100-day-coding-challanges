@@ -49,3 +49,15 @@ else:
 finally:
     print("Program end!")
 
+
+
+sentence = "This is a sample sentence"
+r = sentence.replace(' ', '_')
+print(r)
+
+w = sentence.split()
+print(w)
+
+
+q = '_'.join(w)
+print(q)
