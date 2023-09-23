@@ -16,6 +16,7 @@ print('my name'.ljust(10, '/'))
 
 
 # code with nonajanashia
+# day23 save_01
 
 
 def process_data(data):
