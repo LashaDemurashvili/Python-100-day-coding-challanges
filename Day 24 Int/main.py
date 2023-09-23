@@ -13,21 +13,23 @@ print(me.split())
 print('my name'.ljust(10, '/'))
 
 """
+import random
 
 
 # code with nonajanashia
 # day23 save_01
 
-
-def process_data(data):
-    match data:
-        case 1:
-            print(1)
-        case 3:
-            print(3)
-        case 4:
-            print(4)
-
-
-process_data(1)
-process_data(44)
+#
+# def checking(test_data):
+#     if (test_data.find('.') != -1):
+#         return 'Float'
+#     elif (test_data.isdigit()):
+#         return "Number"
+#     else:
+#         return 'String'
+#
+#
+# data = ['2.22', 100, 'apple', 'strawberry', 222, 33.3, ';']
+#
+# x = str(random.choice(data))
+# print(f"{checking(x)} - '{x}'")
