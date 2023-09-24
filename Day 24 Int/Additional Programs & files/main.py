@@ -76,11 +76,3 @@ print('*' * 100)
 my_set = {'Jan', "Feb", "Mar", "Apr"}
 for i in my_set:
     print(i)
-
-print(list(my_set)[0:2])
-
-dc = {"x": 'a'}
-dc["x"] = input("value: ")
-
-print(type(dc))
-print(dc)

@@ -1,4 +1,6 @@
-import os
+from mod import username
+
+
 
 # user_input = ""
 # while user_input != "exit":
@@ -13,5 +15,4 @@ import os
 #     validate_and_execute(days_and_unit_dictionary)
 
 
-os.mkdir('testfolder1')
 
