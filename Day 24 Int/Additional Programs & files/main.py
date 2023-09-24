@@ -16,6 +16,8 @@ print('my name'.ljust(10, '/'))
 import random
 
 # code with nonajanashia
+# recap
+
 
 #
 # def checking(test_data):
@@ -77,3 +79,8 @@ for i in my_set:
 
 print(list(my_set)[0:2])
 
+dc = {"x": 'a'}
+dc["x"] = input("value: ")
+
+print(type(dc))
+print(dc)
