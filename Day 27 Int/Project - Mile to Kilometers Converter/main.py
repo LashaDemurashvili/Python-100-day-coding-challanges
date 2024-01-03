@@ -2,14 +2,21 @@ from tkinter import *
 
 
 def miles_to_km_fn():
-    miles = float(miles_input.get())
-    km = miles * 1.609  # round 2 decimal
-    kilometer_result_label.config(text=f"{km:.2f}")  # configuration again as - string  and round 2 decimal :.2f
+    entry_text = miles_input.get()
+
+    if not entry_text:
+        miles_label.config(text="Enter number")
+    else:
+        miles = float(miles_input.get())
+        miles_label.config(text='Miles')
+
+        km = miles * 1.609  # round 2 decimal
+        kilometer_result_label.config(text=f"{km:.2f} KM")  # configuration again as - string  and round 2 decimal :.2f
 
 
 window = Tk()
 window.title("Miles To Kilometer Converter")
-window.config(padx=20, pady=20)
+window.config(padx=50, pady=50)
 # configure padding
 
 miles_input = Entry(width=7)
