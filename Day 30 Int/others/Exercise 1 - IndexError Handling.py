@@ -1,3 +1,5 @@
+import random
+
 fruits = ["Apple", "Pear", "Orange"]
 
 
@@ -11,4 +13,7 @@ def make_pie(index):
         print(fruit + " pie")
 
 
-make_pie(4)
+x = random.randint(0, 5)
+print("NO" if x >= 3 else "Yes", x)
+
+make_pie(x)

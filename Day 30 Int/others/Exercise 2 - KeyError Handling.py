@@ -19,4 +19,3 @@ for post in facebook_posts:
 
 print(total_likes)
 
-
